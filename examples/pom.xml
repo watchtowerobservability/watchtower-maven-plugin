@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Minimal app using the plugin. Run: WT_API_KEY=... mvn package -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>example</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0.0</version>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/watchtowerobservability/watchtower-maven-plugin</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.github.watchtowerobservability</groupId>
+        <artifactId>watchtower-maven-plugin</artifactId>
+        <version>0.1.0</version>
+        <configuration>
+          <url>https://watchtower.example.com</url>
+          <project>prj_123</project>
+          <mappingFiles><file>${project.build.directory}/proguard/mapping.txt</file></mappingFiles>
+        </configuration>
+        <executions>
+          <execution><goals><goal>write-release</goal><goal>upload</goal></goals></execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
