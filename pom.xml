@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.watchtowerobservability</groupId>
   <artifactId>watchtower-maven-plugin</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>maven-plugin</packaging>
   <name>Watchtower Maven Plugin</name>
   <description>Uploads ProGuard mappings to Watchtower and injects the release name</description>
@@ -104,7 +104,7 @@
           <plugin>
             <groupId>org.sonatype.central</groupId>
             <artifactId>central-publishing-maven-plugin</artifactId>
-            <version>0.6.0</version>
+            <version>0.12.0</version>
             <extensions>true</extensions>
             <configuration>
               <publishingServerId>central</publishingServerId>
